@@ -2,7 +2,6 @@ import React from "react";
 
 // Admin Imports
 import MainDashboard from "./views/admin/default/index";
-// import NFTMarketplace from "./views/admin/marketplace/index";
 import Profile from "./views/admin/profile/index";
 import DataTables from "./views/admin/tables/index";
 
@@ -17,7 +16,11 @@ import {
   MdBarChart,
   MdPerson,
   MdLock,
+  MdPendingActions,
+  MdLocalShipping,
+  MdDoneOutline
 } from "react-icons/md";
+import { RiFolderReceivedFill } from "react-icons/ri";
 
 const routes = [
   {
@@ -27,18 +30,39 @@ const routes = [
     icon: <MdHome className="h-6 w-6" />,
     component: <MainDashboard />,
   },
+ 
   // {
-  //   name: "NFT Marketplace",
+  //   name: "Orders",
   //   layout: "/admin",
-  //   path: "nft-marketplace",
-  //   icon: <MdOutlineShoppingCart className="h-6 w-6" />,
-  //   component: <NFTMarketplace />,
-  //   secondary: true,
+  //   icon: <MdBarChart className="h-6 w-6" />,
+  //   path: "data-tables",
+  //   component: <DataTables />,
   // },
   {
-    name: "Data Tables",
+    name: "Pending",
     layout: "/admin",
-    icon: <MdBarChart className="h-6 w-6" />,
+    icon: <MdPendingActions className="h-6 w-6" />,
+    path: "data-tables",
+    component: <DataTables />,
+  },
+  {
+    name: "Pickup",
+    layout: "/admin",
+    icon: <MdLocalShipping className="h-6 w-6" />,
+    path: "data-tables",
+    component: <DataTables />,
+  },
+  {
+    name: "Received",
+    layout: "/admin",
+    icon: <RiFolderReceivedFill className="h-6 w-6" />,
+    path: "data-tables",
+    component: <DataTables />,
+  },
+  {
+    name: "Delivered",
+    layout: "/admin",
+    icon: <MdDoneOutline className="h-6 w-6" />,
     path: "data-tables",
     component: <DataTables />,
   },
@@ -58,3 +82,5 @@ const routes = [
   },
 ];
 export default routes;
+
+

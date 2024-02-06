@@ -1,6 +1,6 @@
 
 
-import authImg from "../../assets/img/auth/auth.png"
+import authImg from "../../assets/img/auth/authtest.png"
 import { Link, Routes, Route, Navigate } from "react-router-dom";
 import routes from "../../routes";
 import FixedPlugin from "../../components/fixedPlugin/FixedPlugin";
