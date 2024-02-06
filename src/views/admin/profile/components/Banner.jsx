@@ -4,8 +4,43 @@ import banner from "../../../../assets/img/profile/banner.png";
 import Card from "../../../../components/card/index";
 
 const Banner = () => {
+
+  const shop_owners = [
+    {
+      id: 1,
+      avatar: "images/demo.png",
+      name: "Shop Manager 1",
+      shop:"Hengrabari",
+      role: "Shop manager",
+      mail:"demo1@gmail.com",
+      passcode:"Code123"
+    },
+    {
+      id: 2,
+      avatar: "images/demo.png",
+      name: "Shop Manager 2",
+      shop:"Zoo Road",
+      role: "Shop manager",
+      mail:"demo2@gmail.com",
+      passcode:"kIO3522##"
+    },
+    {
+      id: 3,
+      avatar: "images/demo.png",
+      name: "Shop Manager 3",
+      shop:"Lokhra",
+      role: "Shop manager",
+      mail:"demo3@gmail.com",
+      passcode:"C33fdt#"
+    },
+
+  ];
+
+
   return (
-    <Card extra={"items-center w-full h-full p-[16px] bg-cover"}>
+    <>  {shop_owners.map((shop_owner)=>(
+    
+    <Card extra={"items-center w-full h-half p-[16px] bg-cover"}>
       {/* Background and profile */}
       <div
         className="relative mt-1 flex h-32 w-full justify-center rounded-xl bg-cover"
@@ -17,34 +52,24 @@ const Banner = () => {
       </div>
 
       {/* Name and position */}
+      
+
+
+    
+     
       <div className="mt-16 flex flex-col items-center">
         <h4 className="text-xl font-bold text-navy-700 dark:text-white">
-          Admin
-        </h4>Hengrabari
-        <p className="text-base font-normal text-gray-600">Manager</p>
-      </div>
-
-      {/* Post followers */}
-      {/* <div className="mt-6 mb-3 flex gap-4 md:!gap-14">
-        <div className="flex flex-col items-center justify-center">
-          <p className="text-2xl font-bold text-navy-700 dark:text-white">17</p>
-          <p className="text-sm font-normal text-gray-600">Posts</p>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <p className="text-2xl font-bold text-navy-700 dark:text-white">
-            9.7K
-          </p>
-          <p className="text-sm font-normal text-gray-600">Followers</p>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <p className="text-2xl font-bold text-navy-700 dark:text-white">
-            434
-          </p>
-          
-          <p className="text-sm font-normal text-gray-600">Following</p>
-        </div>
-      </div> */}
+          {shop_owner.name}
+        </h4>{shop_owner.shop}
+        <p className="text-base font-normal text-gray-600">{shop_owner.role}</p>
+        <p className="text-base font-normal text-gray-600">{shop_owner.mail}</p>
+        <p className="text-base font-normal text-gray-600">Code :  {shop_owner.passcode}</p>
+      </div> 
+      
     </Card>
+   ))}
+    </>
+    
   );
 };
 

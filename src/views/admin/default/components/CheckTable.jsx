@@ -53,7 +53,7 @@ const CheckTable = ({name, tableData, action, status}) => {
           {name}
         </div>
         <button className="bg-[#4318ff] text-white px-2 py-1 rounded">
-          See all
+          See All
         </button>
       </header>
 
