@@ -26,6 +26,7 @@ import {
 } from "react-icons/md";
 import { RiFolderReceivedFill } from "react-icons/ri";
 import { IoStorefront } from "react-icons/io5";
+import PersonalDetails from "./views/admin/PersonalDetails/PersonalDetails";
 
 
 const routes = [
@@ -85,6 +86,13 @@ const routes = [
     path: "sign-in",
     icon: <MdLock className="h-6 w-6" />,
     component: <SignIn />,
+  },
+  {
+    name: "Personal Details",
+    layout: "/admin",
+    path: "personal-details/:id",
+    icon: <MdLock className="h-6 w-6" />,
+    component: <PersonalDetails/>,
   },
  
   

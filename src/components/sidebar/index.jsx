@@ -25,7 +25,7 @@ const Sidebar = ({ open, onClose }) => {
           Presto <span class="font-medium">Clean</span>
         </div>
       </div>
-      <div class="mt-[58px] mb-7 h-px bg-gray-300 dark:bg-white/30" />
+      <div className="mt-[58px] mb-7 h-px bg-gray-300 dark:bg-white/30" />
       {/* Nav item */}
 
       <ul className="mb-auto pt-1">

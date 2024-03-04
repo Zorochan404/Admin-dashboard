@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import Card from "../../../../components/card/index";
 import axios from "axios";
 import Popup from "../../../../components/popup/Popup";
+import { useNavigate } from "react-router-dom";
 
 
 function formatDate(dateString) {
@@ -12,8 +13,17 @@ function formatDate(dateString) {
 }
 
 const CheckTable = ({name, tableData, action, status}) => {
+  const Navigate = useNavigate()
   const [showModal, setShowModal] = useState(false);
   const [selectedOrderId, setSelectedOrderId] = useState(null);
+
+
+  const handleDetailsClick = (order) => {
+    // alert('hola amigo')
+    Navigate(`/admin/PersonalDetails/${order._id}`);
+  };
+
+
 
   
   const pickup = async( order) => {
@@ -33,6 +43,10 @@ const CheckTable = ({name, tableData, action, status}) => {
       }
 
     }
+
+   
+
+
     
 
 
@@ -99,6 +113,7 @@ const CheckTable = ({name, tableData, action, status}) => {
                 <td className="pt-[15px] pb-[16px] sm:text-[14px]">{formatDate(row.pickupdate)}</td>
                 <td className="pt-[15px] pb-[16px] sm:text-[14px]">
                 <button className="bg-[#4318ff] text-white px-2 py-1 rounded"
+                 onClick={(e) => handleDetailsClick(row)}
                 //  onClick={() => pending(order)}
                  >
                     Details
