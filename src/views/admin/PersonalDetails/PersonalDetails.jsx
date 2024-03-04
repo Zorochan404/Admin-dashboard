@@ -17,7 +17,7 @@ function PersonalDetails() {
   const detail = async () => {
     try {
       const response = await Axios.get(
-        `$/api/single/order/${id}`,
+        `/api/single/order/${id}`,
         { withCredentials: true }
       );
 
@@ -47,7 +47,6 @@ function PersonalDetails() {
 
   return (
     <div>
-      <h>hola amigo</h>
       <div className="flex flex-wrap justify-around h-screen" key={details._id}>
         <div className="w-4/5 flex flex-col items-center">
           <div className="w-full pt-24 flex justify-start">

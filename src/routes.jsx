@@ -68,32 +68,25 @@ const routes = [
   },
   {
     name: "Store Details",
-    layout: "/admin",
+    layout: "",
     path: "profile",
     icon: <IoStorefront className="h-6 w-6" />,
     component: <Profile />,
   },
-  {
-    name: "Data Tables",
-    layout: "/admin",
-    icon: <MdBarChart className="h-6 w-6" />,
-    path: "data-tables",
-    component: <DataTables />,
-  },
+  // {
+  //   name: "Data Tables",
+  //   layout: "/admin",
+  //   icon: <MdBarChart className="h-6 w-6" />,
+  //   path: "data-tables",
+  //   component: <DataTables />,
+  // },
   {
     name: "Sign In",
     layout: "/auth",
     path: "sign-in",
     icon: <MdLock className="h-6 w-6" />,
     component: <SignIn />,
-  },
-  {
-    name: "Personal Details",
-    layout: "/admin",
-    path: "personal-details/:id",
-    icon: <MdLock className="h-6 w-6" />,
-    component: <PersonalDetails/>,
-  },
+  }
  
   
 ];

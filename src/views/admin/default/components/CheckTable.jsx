@@ -20,7 +20,7 @@ const CheckTable = ({name, tableData, action, status}) => {
 
   const handleDetailsClick = (order) => {
     // alert('hola amigo')
-    Navigate(`/admin/PersonalDetails/${order._id}`);
+    Navigate(`/PersonalDetails/${order._id}`);
   };
 
 
